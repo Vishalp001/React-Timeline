@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+*{
+    box-sizing: border-box;
+}
+body{
+    background-image:
+    linear-gradient(to right, rgba(49, 49, 49, 0.52), rgba(0, 0, 0, 0.73)),
+    url("./images/878.jpg");
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Lato, sans-serif;
+    margin: 0;
+    background-size: cover;
+}
+#root{
+    width: 100%;
+}
+h1{
+    text-align: center;
+}
+.add-data{
+    text-decoration: none;
+    font-size: 25px;
+    margin: 20px 30px;
+    text-align: end;    
+}
+a{
+    text-decoration: none;
+    color: rgb(201, 186, 186);
+    font-family: 'Dancing Script', cursive;
+    letter-spacing: 2px;
+}
+
+
+/* ___________ */
+.timeline-container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 40px 0;
+}
+.timeline-container::after{
+    background-color: #e27b77;
+    content: "";
+    position: absolute;
+    left: calc(50% - 2px);
+    width: 4px;
+    height: 100%;
+}
+.timeline-item{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 30px;
+    margin: 10px 0;
+    width: 50%;
+}
+.timeline-item:nth-child(odd){
+    align-self: flex-end;
+    justify-content: flex-start;
+    padding-right: 0px;
+    padding-left: 30px;
+}
+.timeline-item-content{
+    max-width: 70%;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(104, 100, 100, 0.87);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+    padding: 15px;
+    width: 400px;
+    text-align: right;
+}
+.timeline-item-content::after{
+    content: "";
+    background-color: #fff;
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    box-shadow: 1px -1px 1px rgba(0,0,0,0.2);
+    position: absolute;
+    right: -7.5px;
+    top: calc(50% - 7.5px);
+    transform: rotate(45deg);
+}
+.timeline-item:nth-child(odd) .timeline-item-content{
+    align-items: flex-start;
+    text-align: left;
+}
+.timeline-item:nth-child(odd) .timeline-item-content::after{
+    right: auto;
+    left: -7.5px;
+    box-shadow: -1px 1px 1px rgba(0,0,0,0.2);
+}
+.timeline-item-content .tag{
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px;
+    position: absolute;
+    letter-spacing: 1px;
+    top: 5px;
+    left: 5px;
+    text-transform: uppercase;
+}
+
+.timeline-item:nth-child(odd) .timeline-item-content .tag{
+    left: auto;
+    right: 5px;
+}
+.timeline-item-content time{
+    color: #777;
+    font-size: 12px;
+}
+.timeline-item-content p{
+    font-size: 16px;
+    line-height: 24px;
+    margin: 15px 0;
+    max-width: 250px;
+}
+.timeline-item-content a{
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+.timeline-item-content a::after{
+    content: " 😃" ;
+    font-size: 12px;
+}
+.timeline-item-content .circle{
+    background-color: #fff;
+    border: 3px solid #e27b77;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: calc(50% - 10px);
+    right: -40px;
+    z-index: 100;
+}
+.timeline-item:nth-child(odd) .timeline-item-content .circle{
+    right: auto;
+    left: -40px;
+}
+
+@media only screen and (max-width: 767px){
+    .timeline-item-content,
+    .timeline-item:nth-child(odd)
+    .timeline-item-content{
+        padding: 15px;
+        align-items: center;
+        text-align: center;
+    }
+    .timeline-item-content .tag{
+        width: calc(100% - 10px);
+    }
+    .timeline-item-content time{
+        margin-top: 20px;
+    }
+    .timeline-item-content a{
+        text-decoration: underline;
+    }
+    .timeline-item-content a::after{
+        display: none;
+    }
+}
+
+.datePicker{
+    background-color: #000000;
+    font-family: monospace;
+    color: rgb(248, 248, 10);
+    padding: 0;
+    font-size: 10px;
+    outline: red;
+    border: 0;
+    margin: 5px;
+}
+.textField{
+    padding: 15px;
+    margin: 15px;
+}
+.formContainer{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+.formContainer  div{
+    margin: 5px;
+}
+.formContainer form{
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgb(201, 186, 186);
+}
+
+.homePage h1{
+    font-family: 'Dancing Script', cursive;
+    font-size: 55px;
+    color: rgb(201, 186, 186);
+}
